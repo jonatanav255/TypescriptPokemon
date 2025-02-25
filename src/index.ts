@@ -10,8 +10,8 @@ pokemons.push(pikachu)
 pokemons.push(picoro)
 
 // pikachu.pokemonInfo()
-console.log(pikachu.getPokemonType())
-console.log(picoro.getPokemonType())
+console.log(pikachu.getPokemonPowerLevel())
+console.log(picoro.getPokemonPowerLevel())
 
 // console.log("------------------")
 // console.log("ARRAY OF POKEMONS")

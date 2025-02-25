@@ -35,4 +35,8 @@ export class Pokemon {
     return this.type
   }
 
+  getPokemonPowerLevel(): number {  
+    return this.powerLevel
+  }
+
 }
