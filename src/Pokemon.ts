@@ -1,63 +1,51 @@
 export class Pokemon {
-  ID: number
-  name: string
-  type: string
-  powerLevel: number
+  private _id: number;
+  private _name: string;
+  private _type: string;
+  private _powerLevel: number;
 
-  // Constructor
-  constructor (
-    newID: number,
-    newName: string,
-    newType: string,
-    newPowerLevel: number
-  ) {
-    this.ID = newID
-    this.name = newName
-    this.type = newType
-    this.powerLevel = newPowerLevel
+  constructor(newID: number, newName: string, newType: string, newPowerLevel: number) {
+    this._id = newID;
+    this._name = newName;
+    this._type = newType;
+    this._powerLevel = newPowerLevel;
   }
 
-  pokemonInfo (): void {
+  public get id(): number {
+    return this._id;
+  }
+  public set id(newID: number) {
+    this._id = newID;
+  }
+
+  public get name(): string {
+    return this._name;
+  }
+  public set name(newName: string) {
+    this._name = newName;
+  }
+
+  public get type(): string {
+    return this._type;
+  }
+  public set type(newType: string) {
+    this._type = newType;
+  }
+
+  public get powerLevel(): number {
+    return this._powerLevel;
+  }
+  public set powerLevel(newPowerLevel: number) {
+    this._powerLevel = newPowerLevel;
+  }
+
+  public pokemonInfo(): void {
     console.log(
-      `ID: ${this.ID}, Name: ${this.name}, Type: ${this.type}, PowerLevel: ${this.powerLevel} `
-    )
-  }
-  // Getters
-  getPokemonID (): number {
-    return this.ID
+      `ID: ${this._id}, Name: ${this._name}, Type: ${this._type}, PowerLevel: ${this._powerLevel}`
+    );
   }
 
-  getPokemonName (): string {
-    return this.name
-  }
-
-  getPokemonType (): string {
-    return this.type
-  }
-
-  getPokemonPowerLevel (): number {
-    return this.powerLevel
-  }
-
-  // Setters
-
-  setPokemonID (newID: number): void {
-    this.ID = newID
-  }
-
-  setPokemonName (newName: string): void {
-    this.name = newName
-  }
-
-  setPokemonType (newType: string): void {
-    this.type = newType
-  }
-
-  setPowerNewPower (newPowerLevel: number): void {
-    this.powerLevel = newPowerLevel
-  }
-
-  successfulPokemonTraining (): void {
-    this.powerLevel += 10
+  public successfulPokemonTraining(): void {
+    this._powerLevel += 10;
   }
 }
