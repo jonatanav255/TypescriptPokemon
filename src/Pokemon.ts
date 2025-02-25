@@ -53,4 +53,8 @@ export class Pokemon {
     this.type = newType
   }
 
+  setPowerNewPower(newPowerLevel: number): void {
+    this.powerLevel = newPowerLevel
+  }
+
 }
