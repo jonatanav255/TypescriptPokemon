@@ -4,6 +4,11 @@ interface RegisterResult {
   success: boolean
   message?: string
 }
+
+interface TrainingResult {
+  success: boolean
+  message?: string
+}
 export class PokemonTeam {
   team: Pokemon[] = []
 
@@ -28,6 +33,37 @@ export class PokemonTeam {
       return { success: true, message: 'Pokemon registered successfully' }
     } catch (error: any) {
       return { success: false, message: error.message }
+    }
+  }
+
+  public pokemonTraining (
+    _id: number,
+    trainingType: string,
+    difficulty: number
+  ): TrainingResult {
+    // implementation
+    if (difficulty <= 1 || difficulty >= 100) {
+      return { success: false, message: 'Difficulty must be between 1 and 100' }
+    }
+
+    const pokemon = this.team.find(pokemon => pokemon.id === _id)
+
+    if (!pokemon) {
+      return { success: false, message: 'No Pokémon found with the given ID' }
+    }
+
+    // Check if the Pokémon's power level meets or exceeds the difficulty
+    if (pokemon.powerLevel >= difficulty) {
+      pokemon.successfulPokemonTraining()
+      return {
+        success: true,
+        message: `Training successful: ${pokemon.name} has gained +10 power!`
+      }
+    } else {
+      return {
+        success: false,
+        message: `Training failed: ${pokemon.name} does not meet the required power level.`
+      }
     }
   }
 }
