@@ -1,21 +1,20 @@
 // index.ts
-import { Pokemon } from './Pokemon'
-import { PokemonTeam } from './PokemonTeam'
+import { PokemonTeam } from './PokemonTeam';
 
-const pokemonTeam = new PokemonTeam()
+const pokemonTeam = new PokemonTeam();
 
-try {
-  if (pokemonTeam.registerPokemon(100001, 'Pikachu', 'Electric', 50)) {
-    console.log('Pokemon Pikachu was created successfully.')
-  }
-  if (pokemonTeam.registerPokemon(100002, 'Charmander', 'Fire', 60)) {
-    console.log('Pokemon Charmander was created successfully.')
-  }
-  if (pokemonTeam.registerPokemon(100003, 'Bulbasaur', 'Grass', 55)) {
-    console.log('Pokemon Bulbasaur was created successfully.')
-  }
-} catch (error) {
-  console.error('Error registering Pokemon:', error)
+const result1 = pokemonTeam.registerPokemon(100001, "Pikachu", "Electric", 50);
+if (result1.success) {
+  console.log("Pokemon was created successfully:", result1.message);
+} else {
+  console.error("Failed to create Pokemon:", result1.message);
+}
+
+const result2 = pokemonTeam.registerPokemon(100001, "Charmander", "Fire", 60);
+if (result2.success) {
+  console.log("Pokemon was created successfully:", result2.message);
+} else {
+  console.error("Failed to create Pokemon:", result2.message);
 }
 
 console.log(pokemonTeam)
