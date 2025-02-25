@@ -45,9 +45,12 @@ export class Pokemon {
     this.ID = newID
   }
 
-
   setPokemonName(newName: string): void {
     this.name = newName
+  }
+
+  setPokemonType(newType: string): void {
+    this.type = newType
   }
 
 }
