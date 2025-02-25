@@ -1,14 +1,5 @@
 import { Pokemon } from './Pokemon'
-
-interface RegisterResult {
-  success: boolean
-  message?: string
-}
-
-interface TrainingResult {
-  success: boolean
-  message?: string
-}
+import { RegisterResult, TrainingResult } from './utils/PokemonTeamUtils'
 export class PokemonTeam {
   team: Pokemon[] = []
 
@@ -79,5 +70,19 @@ export class PokemonTeam {
       }
     }
     return strongest
+  }
+
+  public showTeam (): void {
+    if (this.team.length === 0) {
+      console.log('No Pokémon registered in the team.')
+      return
+    }
+
+    console.log('Current Pokémon Team:')
+    this.team.forEach(pokemon => {
+      console.log(
+        `ID: ${pokemon.id}, Name: ${pokemon.name}, Type: ${pokemon.type}, Power Level: ${pokemon.powerLevel}`
+      )
+    })
   }
 }
