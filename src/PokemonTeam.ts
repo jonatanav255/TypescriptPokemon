@@ -66,4 +66,18 @@ export class PokemonTeam {
       }
     }
   }
+
+  public getStrongestPokemon (): Pokemon | null {
+    if (this.team.length === 0) {
+      return null
+    }
+    let strongest = this.team[0]
+
+    for (const pokemon of this.team) {
+      if (pokemon.powerLevel > strongest.powerLevel) {
+        strongest = pokemon
+      }
+    }
+    return strongest
+  }
 }
