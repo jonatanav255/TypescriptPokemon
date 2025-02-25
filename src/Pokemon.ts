@@ -31,4 +31,8 @@ export class Pokemon {
     return this.name
   }
 
+  getPokemonType(): string {
+    return this.type
+  }
+
 }
