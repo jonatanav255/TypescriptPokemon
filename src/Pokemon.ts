@@ -22,4 +22,9 @@ export class Pokemon {
       `ID: ${this.ID}, Name: ${this.name}, Type: ${this.type}, PowerLevel: ${this.powerLevel} `
     )
   }
+
+  getPokemonID() : number {
+    return this.ID
+  }
+  
 }

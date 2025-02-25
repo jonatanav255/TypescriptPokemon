@@ -9,9 +9,11 @@ const picoro = new Pokemon(2, 'picoro', "water", 40);
 pokemons.push(pikachu)
 pokemons.push(picoro)
 
-pikachu.pokemonInfo()
+// pikachu.pokemonInfo()
+console.log(pikachu.getPokemonID())
+console.log(picoro.getPokemonID())
 
-console.log("------------------")
-console.log("ARRAY OF POKEMONS")
-console.log("------------------")
-console.log(pokemons);
+// console.log("------------------")
+// console.log("ARRAY OF POKEMONS")
+// console.log("------------------")
+// console.log(pokemons);
