@@ -26,5 +26,9 @@ export class Pokemon {
   getPokemonID() : number {
     return this.ID
   }
-  
+
+  getPokemonName(): string {
+    return this.name
+  }
+
 }
