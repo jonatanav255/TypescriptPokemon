@@ -10,8 +10,8 @@ pokemons.push(pikachu)
 pokemons.push(picoro)
 
 // pikachu.pokemonInfo()
-pikachu.setPowerNewPower(20)
-picoro.setPowerNewPower(40)
+pikachu.successfulPokemonTraining()
+picoro.successfulPokemonTraining()
 console.log(pikachu.getPokemonPowerLevel())
 console.log(picoro.getPokemonPowerLevel())
 

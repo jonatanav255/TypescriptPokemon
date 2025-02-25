@@ -57,4 +57,7 @@ export class Pokemon {
     this.powerLevel = newPowerLevel
   }
 
+  successfulPokemonTraining(): void{
+    this.powerLevel += 10
+  }
 }
