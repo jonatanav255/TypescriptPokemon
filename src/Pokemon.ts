@@ -22,7 +22,7 @@ export class Pokemon {
       `ID: ${this.ID}, Name: ${this.name}, Type: ${this.type}, PowerLevel: ${this.powerLevel} `
     )
   }
-
+// Getters
   getPokemonID() : number {
     return this.ID
   }
@@ -37,6 +37,11 @@ export class Pokemon {
 
   getPokemonPowerLevel(): number {  
     return this.powerLevel
+  }
+
+  // Setters
+  setPokemonName(newName: string): void {
+    this.name = newName
   }
 
 }
