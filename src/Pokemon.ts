@@ -40,6 +40,12 @@ export class Pokemon {
   }
 
   // Setters
+
+  setPokemonID(newID: number) : void {
+    this.ID = newID
+  }
+
+
   setPokemonName(newName: string): void {
     this.name = newName
   }
